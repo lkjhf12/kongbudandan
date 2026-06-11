@@ -6,7 +6,7 @@ self.addEventListener('install', (ev) => {
 // fetch事件是每次页面请求资源时触发的
 self.addEventListener('fetch', function (event) {
   const url = event.request.url;
-  const isReturnCache = !!(url.match('assets/') && !url.match('game'));
+  const isReturnCache = !!(url.match('/assets/') && !url.match('game'));
   if (isReturnCache) {
     // console.log('%cCACHED: ' + url, 'color: #005CAF; padding: 2px;');
   }

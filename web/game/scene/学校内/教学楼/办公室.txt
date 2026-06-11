@@ -1,0 +1,11 @@
+
+changeBg:dfg.jpg;
+:（你来到了办公室）;
+setVar:jiaoshi=2 -when=jiaoshi==0;
+:（看来这里已经没什么有意思的东西了） -when=bangongshi==0;
+:（这里也空无一人） -when=bangongshi==1;
+:（你在其中一番寻找） -when=bangongshi==1;
+:(找到了一个钥匙) -when=bangongshi==1;
+:（上面写着“配电室”） -when=bangongshi==1;
+setVar:bangongshi=0;
+choose:回去:学校内/教学楼/教学楼内(一楼).txt;

@@ -1,0 +1,36 @@
+
+changeBg:OIP-C (3).webp;
+changeBg:350.jpg;
+:（你回到了二楼） -when=erlou==1;
+changeFigure:ad.png -transform={"position":{"x":130,"y":30},"scale":{"x":0.2,"y":0.2}} -when=erlou==1;
+:（蛋蛋仍站在那里） -when=erlou==1;
+choose:回去:学校内/教学楼/教学楼内(一楼).txt -when=erlou==1;
+
+:（你回到了二楼） -when=shanglou==1;
+:（蛋蛋还在楼下） -when=shanglou==1;
+:（看来可以探索一番了） -when=shanglou==1;
+:(去哪？) -when=shanglou==1;
+choose:配电室:学校内/教学楼/配电室.txt|教室:学校内/教学楼/教室.txt|厕所:学校内/教学楼/厕所.txt -when=shanglou==1;
+:（你来到了二楼）;
+setVar:erlou=1;
+:（不知为何，不安的感觉更加强烈）;
+:（你探头望向走廊）;
+changeFigure:ad.png -transform={"position":{"x":130,"y":30},"scale":{"x":0.2,"y":0.2}};
+:（你发现，蛋蛋正站在走廊深处）;
+:（看来，暂时是没法出去了）;
+:（除非是将蛋蛋引到楼下）;
+:（可能要在楼下制造点声音吧） -notend;
+changeFigure:none;
+setVar:jiaoshi=1;
+setVar:baiban=1;
+:你选择;
+choose:直接冲！:ylyl|回一楼:学校内/教学楼/教学楼内(一楼).txt;
+label:ylyl;
+changeFigure:ad.png -transform={"position":{"x":130,"y":30},"scale":{"x":0.2,"y":0.2}} -duration=0;
+:（你冲出了走廊）;
+changeFigure:none -next;
+bgm:magiaz-scare-407345.mp3 -enter=0 -volume=100;
+changeFigure:aaaa.png -duration=0;
+:你死了;
+intro:♿️冲刺！冲刺！冲！冲！♿️ -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+end;

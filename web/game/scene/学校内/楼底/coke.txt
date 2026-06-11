@@ -1,0 +1,14 @@
+:（你一刀解决了右边的猫） -when=fuhuo==1;
+changeBg:qqs.png -when=fuhuo==1;
+:（另一只猫见状，吓得立刻躲回草丛） -when=fuhuo==1;
+:（你获得了猫） -when=fuhuo==1;
+:（不知为何，你感觉怪怪的） -when=fuhuo==1;
+choose:离开:选择场景文件 -when=fuhuo==1;
+:（你正要离开） -when=fuhuo==1;
+:（突然，那只猫凭空消失) -when=fuhuo==1;
+:（你四处寻找) -when=fuhuo==1;
+bgm:wlgsga.mp3 -volume=100 -when=fuhuo==1;
+changeBg:sdg.png -duration=0 -concat -when=fuhuo==1;
+:你死了 -when=fuhuo==1;
+intro:我勒个烧钢啊 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -when=fuhuo==1;
+end;

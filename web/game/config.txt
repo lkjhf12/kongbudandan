@@ -1,0 +1,7 @@
+Game_name:恐怖蛋蛋;
+Game_key:ec3d82242db4a38;
+Title_img:dsf.png;
+Title_bgm:adfada.mp3;
+Textbox_theme:imss;
+Enable_Appreciation:true;
+Game_Logo:dsf.png;

@@ -1,0 +1,55 @@
+:你向书架内部看去
+:发现一本书《关于中世纪邪教研究》
+:感觉应该有点用
+:要读吗
+choose:读:dss|离开:xxs;
+label:xxs;
+:（等等） -when=ezm>0;
+:（你向书架深处看去） -when=ezm>0;
+:（这里有一本你从未见过的书） -when=ezm>0;
+:（上面写着你完全不认识的文字） -when=ezm>0;
+:要看看吗？ -when=ezm>0;
+choose:看看:adadada|离开:wwwww -when=ezm>0;
+label:adadada;
+:（你翻开书） -when=ezm>0;
+:（书里面也写着你完全不认识的文字） -when=ezm>0;
+:（你想仔细看看） -when=ezm>0;
+:（突然，你头晕目眩） -when=ezm>0;
+:（倒在了地上） -when=ezm>0;
+changeScene:蛋蛋线/蛋蛋.txt -when=ezm>0;
+label:wwwww;
+:（你向外看去，蛋蛋已经消失了） -when=cc==1;
+setVar:cc=0;
+:去哪？;
+choose:楼底:学校内/楼底/楼底.txt|操场:学校内/操场/操场.txt|食堂:学校内/食堂/食堂.txt|门卫室:门卫室.txt -when=damen==1;
+choose:教学楼:学校内/教学楼/教学楼.txt|楼底:学校内/楼底/楼底.txt|操场:学校内/操场/操场.txt|食堂:学校内/食堂/食堂.txt|门卫室:门卫室.txt;
+label:dss;
+setVar:fuhuo=1;
+:“据研究，古代中世纪邪教主要是逝者因怨念过深而成的”
+:“在一个地区徘徊部分时日后便会离开”
+:”在这些场景一般会有猫在场，一般被认为是邪念的化身“
+:“中世纪的人们也相信一种仪式，能够复活逝者，据唯物来看，此种说法应不为真实
+:"画六芒星为阵，在中间放猫（邪念化身）的尸体，手持十字架跪拜后口中念'aryse thou'(古英语读音，意为复活吧)”
+:“待猫逐渐化为黑烟，六芒星逐渐消散，邪祟即破除”
+:看完了;
+choose:离开:asd;
+label:asd;
+:（等等） -when=ezm>0;
+:（你向书架深处看去） -when=ezm>0;
+:（这里有一本你从未见过的书） -when=ezm>0;
+:（上面写着你完全不认识的文字） -when=ezm>0;
+:要看看吗？ -when=ezm>0;
+choose:看看（选择将进入蛋蛋线，无法正常通关）:adadada|离开:wwwww -when=ezm>0;
+label:adadada;
+:（你翻开书） -when=ezm>0;
+:（书里面也写着你完全不认识的文字） -when=ezm>0;
+:（你想仔细看看） -when=ezm>0;
+:（突然，你头晕目眩） -when=ezm>0;
+:（倒在了地上） -when=ezm>0;
+changeScene:蛋蛋线/蛋蛋.txt -when=ezm>0;
+label:wwwww;
+:（你向外看去，蛋蛋已经消失了） -when=cc==1;
+setVar:cc=0;
+:去哪？;
+choose:楼底:学校内/楼底/楼底.txt|操场:学校内/操场/操场.txt|食堂:学校内/食堂/食堂.txt|门卫室:门卫室.txt -when=damen==1;
+choose:教学楼:学校内/教学楼/教学楼.txt|操场:学校内/操场/操场.txt|楼底:学校内/楼底/楼底.txt|门卫室:门卫室.txt|食堂:学校内/食堂/食堂.txt;

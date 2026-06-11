@@ -1,0 +1,15 @@
+
+:（你尝试进入教学楼） -when=damen==1;
+:（但奇怪的是，你打不开教学楼的门了） -when=damen==1;
+:（看来只能去其他地方看看了） -when=damen==1;
+choose:门卫室:门卫室.txt|食堂:学校内/食堂/食堂.txt -when=damen==1;
+setVar:jiaoxuelou=0;
+setVar:jiaoxuelou=1 -when=yaoshi==1;
+changeBg:111.webp;
+:（你来到了教学楼）;
+:（奇怪的是，教学楼的门似乎是锁上了）;
+:（需要一把钥匙）;
+changeScene:学校内/教学楼/教学楼2.txt -when=yaoshi==1;
+:(看来只能去别的地方碰碰运气了);
+:去哪？;
+choose:食堂:学校内/食堂/食堂.txt|图书馆:学校内/图书馆/图书馆.txt|门卫室:门卫室.txt|操场:学校内/操场/操场.txt|楼底:学校内/楼底/楼底.txt;

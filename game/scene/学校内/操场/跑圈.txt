@@ -1,0 +1,31 @@
+
+:（你累得趴在地上，无法动弹） -when=paoquan>5;
+bgm:f681f46a-door-slam-edited-2026-05-01T10-22-25.mp3 -enter=1000 -when=paoquan>5;
+:（这时，伴随着一声巨响） -when=paoquan>5;
+bgm:none;
+:(教学楼的门被撞飞，蛋蛋从里面走了出来) -when=paoquan>5;
+changeFigure:ad.png -left -transform={"position":{"x":-100,"y":100},"scale":{"x":0.2,"y":0.2}} -duration=0 -when=paoquan>5;
+:（之后，蛋蛋朝你飞奔过来） -when=paoquan>5;
+changeFigure: -left -next -duration=0 -when=paoquan>5;
+changeFigure:aaaa.png -next -transform={"position":{"x":0,"y":0},"scale":{"x":1,"y":1}} -duration=0 -when=paoquan>5;
+:你死了 -when=paoquan>5;
+intro:666|给我看力竭了 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500 -when=paoquan>5;
+choose:自己退:选择场景文件 -when=paoquan>5;
+bgm:runs-and-breathes.mp3;
+:（你又在操场上跑了一圈）;
+:......;
+:......;
+:（跑完一圈了）;
+bgm:male-voice-rapid-breathing-after-running.mp3;
+:（更累了...）
+setVar:paoquan=paoquan+1;
+:接下来要？;
+choose:再跑一圈:学校内/操场/跑圈.txt|去操场正中央看看:ddf|跑路:选择场景文件;
+label:ddf;
+bgm:none;
+:（你来到了操场正中央）;
+:（这里看起来十分宽敞）;
+:（但是没有什么有用的东西）;
+choose:离开:djkl;
+label:djkl;
+choose:食堂:学校内/食堂/食堂.txt|门卫室:门卫室.txt|教学楼:学校内/教学楼/教学楼.txt|楼底:学校内/楼底/楼底.txt|图书馆:学校内/图书馆/图书馆.txt;

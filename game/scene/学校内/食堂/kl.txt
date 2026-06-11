@@ -1,0 +1,4 @@
+:（你向外看去，蛋蛋已经消失了） -when=cc==1;
+setVar:cc=0 -when=cc==1;
+:去哪？ -when=dao==0;
+choose:门卫室:门卫室.txt|操场:学校内/操场/操场.txt|图书馆:学校内/图书馆/图书馆.txt|食堂:学校内/食堂/食堂.txt -when=dao==0;

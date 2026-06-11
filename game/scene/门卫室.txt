@@ -1,0 +1,27 @@
+changeBg:qqqqes.jpg!list1x.jpg -when=damen==1;
+:（你立刻来到了门卫室） -when=damen==1;
+:（然后按下了开门的按钮） -when=damen==1;
+:（门开了） -when=damen==1;
+:(看来你可以走了) -when=damen==1;
+changeBg:0744.jpg_wh860.png -when=damen==1;
+:(你向操场望去，蛋蛋正站在操场上) -when=damen==1;
+:(你在蛋蛋的注视下离开了学校) -when=damen==1;
+:（你走出学校后，蛋蛋也消失不见） -when=damen==1;
+setVar:end1=1 -when=damen==1;
+changeScene:end.txt -when=damen==1;
+
+changeBg:qqqqes.jpg!list1x.jpg -when=yaoshi==1;
+:（这里已经没什么值得看的了） -when=yaoshi==1;
+:去哪？ -when=yaoshi==1;
+choose:食堂:学校内/食堂/食堂.txt|教学楼:学校内/教学楼/教学楼.txt|楼底:学校内/楼底/楼底.txt|图书馆:学校内/图书馆/图书馆.txt|操场:学校内/操场/操场.txt -when=yaoshi==1;
+changeBg:qqqqes.jpg!list1x.jpg;
+:（你来到了门卫室）;
+:（门卫室里空无一人，十分杂乱）;
+:（你尝试打开大门）;
+:（但是毫无反应）;
+:（可能是没电了）;
+:（你在床的枕头底下找到了一个钥匙，上面隐隐约约写着“教....”）;
+setVar:yaoshi=1;
+:（你将钥匙放在兜里，离开了保安室）;
+:之后，你去到;
+choose:食堂:学校内/食堂/食堂.txt|教学楼:学校内/教学楼/教学楼.txt|楼底:学校内/楼底/楼底.txt|操场:学校内/操场/操场.txt|图书馆:学校内/图书馆/图书馆.txt;

@@ -1,0 +1,37 @@
+changeScene:学校内/食堂/食堂新.txt -when=damen==1;
+changeScene:学校内/食堂/食堂2.txt -when=shitang==1
+changeBg:aaaaqa.png;
+:（你来到了食堂）;
+bgm:cutting_potato_slowly.mp3 -volume=50;
+setVar:shitang=1;
+:（虽然食堂内空无一人）;
+:（但在后厨中却时不时传来切菜声）;
+:（只有一个人）;
+:（ 看来现在食堂很缺人手）;
+:要帮忙吗？;
+bgm:none;
+choose:要:ffff|不要:fku
+label:fku;
+:（你选择不帮忙）;
+:接下来你要;
+choose:离开:学校内/食堂/离开.txt|搜寻:sx
+label:ffff;
+:（你来到了后厨）;
+bgm:cutting_potato_slowly.mp3 -volume=100;
+:（这里有一个半透明的男子在切菜）;
+:（这场面尤为诡异）;
+我:你一个人累吗，需要帮助吗;
+bgm:none;
+？？？:哦，确实，这大半夜的一个人也没有，现在食堂很缺人手，正好你可以来帮忙，你确定吗？;
+我:当然可以;
+:（那名男子诡异地笑了笑，然后突然抓住你的手，摁到了案板上）;
+:（还没等你说话，他就一刀剁了下去）;
+:（你眼睁睁地看着你的手被剁掉，鲜血流满了整个案板）;
+？？？:好了，谢谢你，现在我们不缺“人手”了;
+:你死了;
+intro:达成坏结局|助人为乐 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+end;
+label:sx;
+:（你在食堂里到处翻找，却什么也没找到，累得你差点倒在地上）;
+setVar:souxunt=1;
+choose:离开:学校内/食堂/离开.txt;

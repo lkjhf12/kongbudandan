@@ -1,0 +1,28 @@
+
+changeBg:aaaaqa.png;
+bgm:cutting_potato_slowly.mp3;
+:（你回到了食堂）;
+:要干什么？;
+choose:离开:学校内/食堂/离开.txt|去后厨:ylyl -when=souxunt==1;
+choose:离开:学校内/食堂/离开.txt|去后厨:ylyl|搜寻:sx -when=shitang==1;
+label::ylyl;
+:（你来到了后厨）;
+:(这里有个看不见的人在切菜);
+:你选择;
+choose:帮忙:kkk|离开:学校内/食堂/食堂2.txt;
+label:kkk;
+我:你一个人累吗，需要帮助吗;
+bgm:none;
+？？？:哦，确实，这大半夜的一个人也没有，现在食堂很缺人手，正好你可以来帮忙，你确定吗？;
+我:当然可以;
+:（那名男子诡异地笑了笑，然后突然抓住你的手，摁到了案板上）;
+:（还没等你说话，他就一刀剁了下去）;
+:（你眼睁睁地看着你的手被剁掉，鲜血流满了整个案板）;
+？？？:好了，谢谢你，现在我们不缺“人手”了;
+:你死了;
+intro:达成坏结局|助人为乐 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+end;
+label:sx;
+:（你在食堂里到处翻找，却什么也没找到，累得你差点倒在地上）;
+setVar:souxunt=1;
+choose:离开:学校内/食堂/离开.txt;
